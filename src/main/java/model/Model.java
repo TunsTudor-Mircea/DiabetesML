@@ -1,4 +1,6 @@
-package domain;
+package model;
+
+import data.Instance;
 
 import java.util.List;
 
