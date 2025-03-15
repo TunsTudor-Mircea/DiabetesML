@@ -5,7 +5,7 @@
 ## Features
 
 - **Machine Learning Models**: K-Nearest Neighbors (KNN), Naive Bayes, Perceptron, Decision Tree, and Logistic Regression.
-- **GUI Interface**: Built with JavaFX for an easy-to-use interface for inputting data and displaying results.
+- **GUI**: Built with JavaFX for an easy-to-use interface for inputting data and displaying results.
 - **Customizable Hyperparameters**: Each model comes with adjustable hyperparameters for tuning.
 - **Data Evaluation**: Evaluates models using **Accuracy**, **Precision**, **Recall**, and **F1 Score**.
 - **Data Splitting**: Customizable training/testing split for data.
