@@ -1,7 +1,5 @@
 package data;
 
-import domain.Instance;
-
 import java.util.Collections;
 import java.util.List;
 

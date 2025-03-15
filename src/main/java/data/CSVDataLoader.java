@@ -1,7 +1,5 @@
 package data;
 
-import domain.Instance;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
