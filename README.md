@@ -28,26 +28,26 @@ Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunc
 ```
 
 2. **Choose Model:** Select a machine learning model from the following:
-* K-Nearest Neighbors (KNN): A simple, instance-based learning algorithm.
-* Naive Bayes: A probabilistic classifier based on Bayes’ theorem.
-* Perceptron: A basic neural network-based algorithm for binary classification.
-* Decision Tree: A tree-based model for classification that splits data based on features.
-* Logistic Regression: A statistical method for binary classification, predicting the probability of an outcome.
+🔹 K-Nearest Neighbors (KNN): A simple, instance-based learning algorithm.
+🔹 Naive Bayes: A probabilistic classifier based on Bayes’ theorem.
+🔹 Perceptron: A basic neural network-based algorithm for binary classification.
+🔹 Decision Tree: A tree-based model for classification that splits data based on features.
+🔹 Logistic Regression: A statistical method for binary classification, predicting the probability of an outcome.
 
 3. **Adjust Hyperparameters:** Customize the hyperparameters for each model via the GUI:
 
-- KNN: Number of neighbors, distance metric
-- Naive Bayes: Smoothing parameter.
-- Perceptron: Learning rate, number of iterations
-- Logistic Regression: Regularization, solver, etc.
+🔹 KNN: Number of neighbors, distance metric
+🔹 Naive Bayes: Smoothing parameter.
+🔹 Perceptron: Learning rate, number of iterations
+🔹 Logistic Regression: Regularization, solver, etc.
 
 4. **Train and Test:** Adjust the training/testing split ratio (e.g., 80/20 or 70/30) using the GUI.
 
 5. **Evaluate the Model:** After training, the system will display evaluation metrics such as:
-* Accuracy: Proportion of correctly predicted instances.
-* Precision: Proportion of positive predictions that are correct.
-* Recall: Proportion of actual positives that are correctly identified.
-* F1 Score: The harmonic mean of precision and recall.
+🔹 Accuracy: Proportion of correctly predicted instances.
+🔹 Precision: Proportion of positive predictions that are correct.
+🔹 Recall: Proportion of actual positives that are correctly identified.
+🔹 F1 Score: The harmonic mean of precision and recall.
 
 ## Future
 
