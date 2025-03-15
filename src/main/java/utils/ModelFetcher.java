@@ -39,13 +39,11 @@ public class ModelFetcher {
 
             case "Perceptron": {
                 String[] params = hyperParams.split(",");
-                int epochs = Integer.parseInt(params[0]);
+                double learningRate = Double.parseDouble(params[0]);
+                int epochs = Integer.parseInt(params[1]);
                 System.out.println();
 
-                int learningRate = Integer.parseInt(params[1]);
-                System.out.println();
-
-                model = new Perceptron(epochs, learningRate);
+                model = new Perceptron(learningRate, epochs);
 
                 break;
             }
