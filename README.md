@@ -20,14 +20,14 @@
 
 ## Usage
 
-1. ### **Load Data:** Use the GUI to load a CSV file containing patient data. The data should be in the following format (example):
+### **1. Load Data:** Use the GUI to load a CSV file containing patient data. The data should be in the following format (example):
 ```console
 Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
 6,148,72,35,0,33.6,0.627,50,1
 1,85,66,29,0,26.6,0.351,31,0
 ```
 
-2. ### **Choose Model:** Select a machine learning model from the following:
+### **2. Choose Model:** Select a machine learning model from the following:
    
 - K-Nearest Neighbors (KNN): A simple, instance-based learning algorithm.
 
@@ -39,7 +39,7 @@ Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunc
 
 - Logistic Regression: A statistical method for binary classification, predicting the probability of an outcome.
 
-3. ### **Adjust Hyperparameters:** Customize the hyperparameters for each model via the GUI:
+### **3. Adjust Hyperparameters:** Customize the hyperparameters for each model via the GUI:
 
 - KNN: Number of neighbors, distance metric
 
@@ -47,9 +47,9 @@ Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunc
 
 - Logistic Regression: Learning rate, number of iterations
 
-4. ### **Train and Test:** Adjust the training/testing split ratio (e.g., 80/20 or 70/30) using the GUI.
+### **4. Train and Test:** Adjust the training/testing split ratio (e.g., 80/20 or 70/30) using the GUI.
 
-5. ### **Evaluate the Model:** After training, the system will display evaluation metrics such as:
+### **5. Evaluate the Model:** After training, the system will display evaluation metrics such as:
    
 - Accuracy: Proportion of correctly predicted instances.
 
