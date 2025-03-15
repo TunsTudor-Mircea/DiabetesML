@@ -22,6 +22,11 @@ public class Recall implements EvaluationMeasure<Number, Integer> {
             }
         }
 
+        // avoid division by zero
+        if (truePositives + falseNegative == 0) {
+            return 1.0;
+        }
+
         return (double) truePositives / (double) (truePositives + falseNegative);
     }
 }
