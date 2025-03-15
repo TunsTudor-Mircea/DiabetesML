@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainWindowController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <HBox prefHeight="400.0" prefWidth="700.0">
+            <VBox alignment="CENTER" prefHeight="364.0" prefWidth="350.0">
+                <Label alignment="CENTER" prefHeight="66.0" prefWidth="350.0" text="DiabetesML" textFill="#2d8f0a">
+              <font>
+                 <Font name="JetBrains Mono Medium" size="24.0" />
+              </font></Label>
+            <ComboBox fx:id="cmbClassifier" prefHeight="30.0" prefWidth="300.0" promptText="Select Model" />
+
+                <HBox alignment="CENTER" prefHeight="70.0" prefWidth="350.0" spacing="10">
+                    <Label text="Enter Input File:">
+                 <font>
+                    <Font name="JetBrains Mono Regular" size="14.0" />
+                 </font></Label>
+                    <TextField fx:id="txtInputFilePath" promptText="diabetes.csv" />
+                </HBox>
+
+                <HBox alignment="CENTER" prefHeight="70.0" prefWidth="350.0" spacing="10">
+                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <Label text="Train">
+                    <font>
+                       <Font name="JetBrains Mono Regular" size="14.0" />
+                    </font></Label>
+                        <Label fx:id="trainLabel" text="20%" textAlignment="CENTER">
+                    <font>
+                       <Font name="JetBrains Mono Light" size="14.0" />
+                    </font></Label>
+                    </VBox>
+                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <Slider fx:id="sldSplit" blockIncrement="5.0" showTickMarks="true" value="20.0" />
+                        <Label text="Dataset Split">
+                    <font>
+                       <Font name="JetBrains Mono Regular" size="12.0" />
+                    </font></Label>
+                    </VBox>
+                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <Label text="Test">
+                    <font>
+                       <Font name="JetBrains Mono Regular" size="14.0" />
+                    </font></Label>
+                        <Label fx:id="testLabel" text="80%">
+                    <font>
+                       <Font name="JetBrains Mono Light" size="14.0" />
+                    </font></Label>
+                    </VBox>
+                </HBox>
+
+                <HBox alignment="CENTER" prefHeight="70.0" prefWidth="350.0" spacing="10">
+                    <Label prefHeight="25.0" prefWidth="141.0" text="Hyper Parameters">
+                 <font>
+                    <Font name="JetBrains Mono Regular" size="14.0" />
+                 </font></Label>
+                    <TextField fx:id="txtHyperParameters" prefHeight="30.0" prefWidth="133.0" promptText="separated by coma" />
+                </HBox>
+
+                <HBox alignment="CENTER" prefHeight="85.0" prefWidth="350.0" spacing="10">
+                    <Button onAction="#train" prefHeight="42.0" prefWidth="65.0" text="Train">
+                 <font>
+                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                 </font></Button>
+
+                    <Button fx:id="testButton" onAction="#test" prefHeight="42.0" prefWidth="65.0" text="Test">
+                 <font>
+                    <Font name="JetBrains Mono ExtraBold" size="12.0" />
+                 </font></Button>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="361.0" prefWidth="350.0">
+                <Label alignment="CENTER" prefHeight="55.0" prefWidth="350.0" text="Test Results">
+                    <font>
+                        <Font name="JetBrains Mono Thin" size="18.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="350.0">
+                    <Label fx:id="accuracyLabel" alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="165.0" text="0%" textFill="#e20008">
+                  <font>
+                     <Font name="JetBrains Mono ExtraBold" size="24.0" />
+                  </font></Label>
+                    <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="130.0" text="Accuracy">
+                        <font>
+                            <Font name="JetBrains Mono SemiBold" size="16.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="350.0">
+                    <Label fx:id="precisionLabel" alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="165.0" text="0%" textFill="#e20008">
+                  <font>
+                     <Font name="JetBrains Mono ExtraBold" size="24.0" />
+                  </font></Label>
+                    <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="130.0" text="Precision">
+                        <font>
+                            <Font name="JetBrains Mono SemiBold" size="16.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="350.0">
+                    <Label fx:id="recallLabel" alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="165.0" text="0%" textFill="#e20008">
+                  <font>
+                     <Font name="JetBrains Mono ExtraBold" size="24.0" />
+                  </font></Label>
+                    <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="130.0" text="Recall">
+                        <font>
+                            <Font name="JetBrains Mono SemiBold" size="16.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="350.0">
+                    <Label fx:id="f1ScoreLabel" alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="165.0" text="0%" textFill="#e20008">
+                  <font>
+                     <Font name="JetBrains Mono ExtraBold" size="24.0" />
+                  </font></Label>
+                    <Label alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="130.0" text="F1 Score">
+                        <font>
+                            <Font name="JetBrains Mono SemiBold" size="16.0" />
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+        </HBox>
+    </AnchorPane>
+</Pane>

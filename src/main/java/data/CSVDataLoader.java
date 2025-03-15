@@ -7,21 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CSVDataLoader {
-    public static List<Instance<Double, Integer>> loadCSV(String filePath) {
-        List<Instance<Double, Integer>> instances = new ArrayList<>();
+    public static List<Instance<Number, Integer>> loadCSV(String filePath) {
+        List<Instance<Number, Integer>> instances = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
 
             // Skip the header row
-            if ((line = br.readLine()) != null) {
+            if (br.readLine() != null) {
                 System.out.println("Loaded dataset.");
             }
 
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");
 
-                List<Double> features = new ArrayList<>();
+                List<Number> features = new ArrayList<>();
 
                 for (int i = 0; i < values.length - 1; i++) {
                     features.add(Double.parseDouble(values[i])); // Parse features

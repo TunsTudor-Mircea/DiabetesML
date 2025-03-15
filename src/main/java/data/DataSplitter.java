@@ -5,10 +5,10 @@ import java.util.List;
 
 public class DataSplitter {
     public static void splitData(
-            List<Instance<Double, Integer>> instances,
+            List<Instance<Number, Integer>> instances,
             double trainPercentage,
-            List<Instance<Double, Integer>> trainSet,
-            List<Instance<Double, Integer>> testSet) {
+            List<Instance<Number, Integer>> trainSet,
+            List<Instance<Number, Integer>> testSet) {
 
         // Shuffle the dataset to randomize the split
         Collections.shuffle(instances);
