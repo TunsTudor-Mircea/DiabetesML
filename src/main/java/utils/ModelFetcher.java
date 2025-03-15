@@ -1,9 +1,6 @@
 package utils;
 
-import model.KNN;
-import model.Model;
-import model.NaiveBayes;
-import model.Perceptron;
+import model.*;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -53,22 +50,22 @@ public class ModelFetcher {
 
                 break;
             }
-//
-//            case "LogisticRegression": {
-//                String[] params = hyperParams.split(",");
-//                double learningRate = Double.parseDouble(params[0]);
-//                int iterations = Integer.parseInt(params[1]);
-//
-//                model = new LogisticRegression(learningRate, iterations);
-//
-//                break;
-//            }
-//
-//            case "DecisionTree": {
-//                model = new DecisionTree();
-//
-//                break;
-//            }
+
+            case "LogisticRegression": {
+                String[] params = hyperParams.split(",");
+                double learningRate = Double.parseDouble(params[0]);
+                int iterations = Integer.parseInt(params[1]);
+
+                model = new LogisticRegression(learningRate, iterations);
+
+                break;
+            }
+
+            case "DecisionTree": {
+                model = new DecisionTree();
+
+                break;
+            }
 
             default: {
                 System.out.println("Invalid Model Type.");
