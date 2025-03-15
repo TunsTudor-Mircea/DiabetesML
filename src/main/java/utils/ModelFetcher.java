@@ -2,6 +2,8 @@ package utils;
 
 import model.KNN;
 import model.Model;
+import model.NaiveBayes;
+import model.Perceptron;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -35,24 +37,24 @@ public class ModelFetcher {
                 break;
             }
 
-//            case "Perceptron": {
-//                String[] params = hyperParams.split(",");
-//                int epochs = Integer.parseInt(params[0]);
-//                System.out.println();
-//
-//                double learningRate = Double.parseDouble(params[1]);
-//                System.out.println();
-//
-//                model = new Perceptron(epochs, learningRate);
-//
-//                break;
-//            }
-//
-//            case "NaiveBayes": {
-//                model = new NaiveBayes();
-//
-//                break;
-//            }
+            case "Perceptron": {
+                String[] params = hyperParams.split(",");
+                int epochs = Integer.parseInt(params[0]);
+                System.out.println();
+
+                int learningRate = Integer.parseInt(params[1]);
+                System.out.println();
+
+                model = new Perceptron(epochs, learningRate);
+
+                break;
+            }
+
+            case "NaiveBayes": {
+                model = new NaiveBayes();
+
+                break;
+            }
 //
 //            case "LogisticRegression": {
 //                String[] params = hyperParams.split(",");
